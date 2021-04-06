@@ -1,19 +1,26 @@
 <h1>書本列表</h1>
 
-<%= form_for(@book) do |f| %>
-  <%= f.label :name, '作者' %>
-  <%= f.text_field :name %><br/>
+<%= link_to '新增書本', new_book_path %>
+</br>
+<table>
+  <tr>
+    <td>得票數</td>
+    <td>書名</td>
+    <td>作者</td>
+    <td>類別</td>
+    <td>簡介</td>
+    <td>動作</td>
+  </tr>
+  <% @books.each do |book| %>
+  <tr>
+    <td><%= book.name %></td>
+    <td><%= book.author %></td>
+    <td><%= book.category %></td>
+    <td><%= book.brief %></td>
+    <td><%= book.votes %></td>
+  </tr>
+  <% end %>
+</table>
 
-  <%= f.label :category, '類別' %>
-  <%= f.text_field :category %><br/>
 
-  <%= f.label :contry, '國籍' %>
-  <%= f.text_field :contry %><br/>
-
-  <%= f.label :brief, '簡介' %>
-  <%= f.text_area :brief %><br/>
-
-  <%= f.submit %>
-<% end %>
-
-<%= link_to '回到書本列表', books_path%>
+    

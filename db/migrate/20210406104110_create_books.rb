@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration[6.1]
       t.string :category
       t.string :contry
       t.text :brief
-      t.integer :votes
+      t.integer :votes,
 
       t.timestamps
     end
