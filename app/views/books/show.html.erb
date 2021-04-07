@@ -1,0 +1,22 @@
+<h1>書本資訊</h1>
+
+<%= link_to '回到書本列表', books_path%>
+
+<table>
+  <tr>
+    
+    <td>書名</td>
+    <td>作者</td>
+    <td>類別</td>
+    <td>簡介</td>
+    
+  </tr>
+ 
+  <tr>
+    
+    <td><%= @book.name %></td>
+    <td><%= @book.author %></td>
+    <td><%= @book.category %></td>
+    <td><%= @book.brief %></td>
+  </tr>
+</table>
